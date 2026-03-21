@@ -113,7 +113,7 @@ def log_state():
 
     _state_log_initialized = True
 
-def log_event(event_time, **details):
+def log_event(event_type, **details):
     global _event_log_initialized
 
     now = datetime.now()
@@ -126,11 +126,8 @@ def log_event(event_time, **details):
         **details,
     }
 
-    mode = "w" if not _event_log_initiated else "a"
+    mode = "w" if not _event_log_initialized else "a"
     with open("game_events.jsonl", mode) as f:
         f.write(json.dumps(event) + "\n")
 
     _event_log_initialized = True
-
-
-
