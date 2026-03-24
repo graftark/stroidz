@@ -53,7 +53,7 @@ def main():
                 if stroid.collides_with(shot):
                     log_event("asteroid_shot")
                     shot.kill()
-                    stroid.kill()
+                    stroid.split()
 
         pygame.display.flip()
         dt = clock.tick(60) / 1000
