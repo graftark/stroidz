@@ -5,8 +5,10 @@ build/
 dist/
 wheels/
 *.egg-info
+game_state.jsonl
+todo.txt
 
 # Virtual environments
 .venv
 
-game_state.jsonl
+
